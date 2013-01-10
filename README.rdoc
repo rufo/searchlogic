@@ -1,3 +1,5 @@
+This version fixes up searchlogic v1 to work with rails_xss, for use in a Rails 2.3 application I'm working on cleaning up and transitioning to Rails 3. Not reccomended, unless you're in the same boat.
+
 = Searchlogic
 
 Searchlogic's goal is to keep your application free of searching clutter. It's is an ActiveRecord extension that allows you to perform simple and complex searches with a hash. Why is this great? Because GET and POST parameters are a hash. This means if you can execute a search with a hash, you can execute a search using GET or POST parameters. This makes searching in your application dead simple and clutter free:
