@@ -87,11 +87,16 @@ module Searchlogic
         def order_by_link(order_by, options = {})
           add_order_by_link_defaults!(order_by, options)
           html = searchlogic_state(options)
+
+          text = options[:text]
+          if text.respond_to? :html_safe!
+            text.html_safe!
+          end
           
           if !options[:is_remote]
-            html += link_to(options[:text], options[:url], options[:html])
+            html += link_to(text, options[:url], options[:html])
           else
-            html += link_to_remote(options[:text], options[:remote].merge(:url => options[:url]), options[:html])
+            html += link_to_remote(text, options[:remote].merge(:url => options[:url]), options[:html])
           end
           
           html
