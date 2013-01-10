@@ -4,6 +4,8 @@ require "rubygems"
 require "hoe"
 require File.dirname(__FILE__) << "/lib/searchlogic/version"
 
+Hoe.plugin :gemspec
+
 Hoe.spec("Searchlogic") do |p|
   p.name = "searchlogic"
   p.author = "Ben Johnson of Binary Logic"
