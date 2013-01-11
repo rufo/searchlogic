@@ -89,8 +89,8 @@ module Searchlogic
           html = searchlogic_state(options)
 
           text = options[:text]
-          if text.respond_to? :html_safe!
-            text.html_safe!
+          if text.respond_to? :html_safe
+            text.html_safe
           end
           
           if !options[:is_remote]

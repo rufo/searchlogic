@@ -126,8 +126,8 @@ module Searchlogic
               html << hidden_field(name, field, :object => search_object, :id => "#{name}_#{field}_#{options.object_id}", :value => (field == :order_by ? searchlogic_base64_value(search_object.order_by) : search_object.send(field)))
             end
 
-            if html.respond_to? :html_safe!
-              html.html_safe!
+            if html.respond_to? :html_safe
+              html.html_safe
             end
               
             # For edge rails and older version compatibility, passing a binding to concat was deprecated
